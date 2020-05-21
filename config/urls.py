@@ -16,6 +16,7 @@ urlpatterns = [
     path("users/", include("django_crash_course.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("cheeses/", include("django_crash_course.cheeses.urls", namespace="cheeses"))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
