@@ -11,6 +11,12 @@
 
   {% if cheese.description %}<p>{{ cheese.description }}</p>{% endif %}
 
+  {% if cheese.country_of_origin %}
+    <p>Country of Origin: {{ cheese.country_of_origin.name }}
+    <img  src="{{ cheese.country_of_origin.flag }}" />
+    </p>
+  {% endif %}
+
   <button><a href="{% url 'cheeses:list' %}">Back to List</a></button>
 
 {% endblock content %}

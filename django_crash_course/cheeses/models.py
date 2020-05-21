@@ -1,6 +1,7 @@
 from django.db import models
 
 from autoslug import AutoSlugField
+from django_countries.fields import CountryField
 from model_utils.models import TimeStampedModel
 
 class Cheese(TimeStampedModel):
@@ -14,5 +15,6 @@ class Cheese(TimeStampedModel):
         SEMI_HARD="semi-hard","Semi Hard"
         HARD="hard","Hard"
     firmness=models.CharField("Firmness", max_length=20, choices=Firmness.choices, default=Firmness.UNSPECIFIED)
+    country_of_origin = CountryField("Country of Origin", blank=True)
     def __str__(self):
         return self.name
