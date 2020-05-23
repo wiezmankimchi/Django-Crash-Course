@@ -1,0 +1,8 @@
+echo "commit comment"
+read comment
+unset GIT_DIR
+git status
+git add .
+git commit -m "$comment"
+# git push origin master
+
