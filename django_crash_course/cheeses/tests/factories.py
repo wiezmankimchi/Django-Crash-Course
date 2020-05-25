@@ -3,6 +3,12 @@ from django.template.defaultfilters import slugify
 import factory
 import factory.fuzzy
 
+import pytest
+
+@pytest.fixture
+def cheese():
+    return CheeseFactory()
+
 from ..models import Cheese
 from django_crash_course.users.tests.factories import UserFactory
 
