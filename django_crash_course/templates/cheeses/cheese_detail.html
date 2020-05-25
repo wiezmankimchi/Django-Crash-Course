@@ -16,7 +16,10 @@
     <img  src="{{ cheese.country_of_origin.flag }}" />
     </p>
   {% endif %}
-
+<hr/>
+<p>
+  <a class="btn btn-primary" href="{% url 'cheeses:update' cheese.slug %}" role="button">Update</a>
+</p>
   <hr/>
   <h3>Submitted by
     <a href="{% url 'users:detail' cheese.creator.username %}">{{ cheese.creator.username }}</a>
